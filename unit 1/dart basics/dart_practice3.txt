@@ -1,0 +1,20 @@
+1. Write following Functions
+These Functions are working on NumberSystem
+a) Decimal Number - Binary Conversion
+b) Binary Number - Decimal Conversion
+c) Decimal Number - Octal Conversion
+d) Octal number - Decimal Conversion
+e) Octal Number - Binary Conversion
+f) Decimal Number - Hexa Conversion
+g) Hexa Number - Decimal Conversion
+h) Hexa Number - Binary Conversion
+
+
+Create an Outer / Wrapper Function called e.g NS
+NS Contains functions from (a) to (h) and based on the argument u pass to NS function it return the required function, After getting the required function from NS , we pass that function to printNS function , this function is responsible to invoke the required Number System Function and get the result and return that result to the main function. The Base 2,8,16 is the common thing for all the Number System Functions.
+main print the final result.
+
+We are able to See : Outer Inner function concept
+Callback Function
+Function return function
+Closure
