@@ -1,0 +1,5 @@
+1. Create a class employee with the properties: EmpId, EmpName, EmpDept and EmpSalary. Provide
+setter and getter methods for these properties. Calculate the salary as per the dept of the
+employee. All employee are entitled for basic salary 50000 with Allowances as per the dept. The
+percentage of allowances are given in the following map: {admin: 20%, teamlead:70%, technical:
+60%, officestaff:10%}.
