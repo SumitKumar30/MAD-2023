@@ -1,0 +1,47 @@
+1. Suppose that we have a set of objects with some common behaviors: they could move up, down, left or right. The exact behaviors (such as how to move and how far to move) depend on the objects themselves. One common way to model these common behaviors is to define an interface called Movable, with abstract methods moveUp(), moveDown(), moveLeft() and moveRight(). The classes that implement the Movable interface will provide actual implementation to these abstract methods.
+Movable --> abstract class
+members: 
+
+moveUp(): void
+moveDown(): void
+moveLeft(): void
+moveRight(): void
+
+MovablePoint --> concrete class inherits Movable
+members:
+int x;
+int y;
+int xSpeed;
+int ySpeed;
+
+constructor with optional named parameters
+
+MovableCircle --> concrete class inherits Movable
+members:
+
+int radius;
+MovablePoint center;
+
+constructor with optional named parameters
+
+
+Write a test program and try out these statements:
+
+Movable m1 = new MovablePoint(5, 6, 10, 15);     
+// upcast 
+print(m1); 
+m1.moveLeft(); 
+print(m1);    
+Movable m2 = new MovableCircle(1, 2, 3, 4, 20);  
+// upcast 
+print(m2); 
+m2.moveRight(); 
+print(m2);
+
+Definition of Done:
+
+a) The class definitions are defined as per the class diagram.
+b) Each class definition is stored in its own .java file.
+c) Base class constructors are invoked using super keyword
+d) Function overriding is applied wherever applicable.
+ 
