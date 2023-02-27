@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.cyan),
         // home: InfoScreen(),
+      // Add code for routes
         routes: {
           '/': (context)=> InfoScreen(),
           '/movieReview': (context) => MovieReview() 
