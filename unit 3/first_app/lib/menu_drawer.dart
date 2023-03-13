@@ -1,5 +1,6 @@
 import 'package:first_app/info_screen.dart';
 import 'package:first_app/movie_reviews.dart';
+import 'package:first_app/weather_screen.dart';
 import 'package:flutter/material.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -18,7 +19,7 @@ class MenuDrawer extends StatelessWidget {
     final List<String> menuTitles = [
       'Home',
       'Movie Review',
-      'Contact',
+      'Weather',
       'About Us'
     ];
 
@@ -53,6 +54,10 @@ class MenuDrawer extends StatelessWidget {
               break;
             case 'Movie Review':
               screen = MovieReview();
+              break;
+
+            case 'Weather':
+              screen = WeatherScreen();
           }
           //Navigator.of(ctx).pop();
           Navigator.of(ctx).push(MaterialPageRoute(builder: (ctx) => screen));
