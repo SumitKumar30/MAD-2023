@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_app/utils/constants.dart';
 
@@ -45,6 +46,8 @@ class _AddProductState extends State<AddProduct> {
               leading: Icon(Icons.logout),
               title: Text('Log Out'),
               onTap: () {
+                FirebaseAuth.instance.signOut();
+                await Future.delayed(Duration(seconds: 1));
                 Navigator.pushNamed(context, RoutesConstants.LOGIN);
               },
             ),
