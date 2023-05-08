@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_app/models/products.dart';
 import 'package:shopping_app/screens/products_list.dart';
+import 'package:shopping_app/screens/search_product.dart';
 import 'package:shopping_app/utils/constants.dart';
 import 'package:shopping_app/utils/toast.dart';
 
@@ -32,8 +33,7 @@ class _AddProductState extends State<AddProduct> {
           children: [
             UserAccountsDrawerHeader(
               accountName: Text('User Name'),
-              accountEmail:
-                  Text('john@ncu.org'),
+              accountEmail: Text('john@ncu.org'),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('images/alex_unsplash.jpg'),
               ),
@@ -54,7 +54,10 @@ class _AddProductState extends State<AddProduct> {
             ListTile(
               leading: Icon(Icons.search),
               title: Text('Search Product'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SearchProduct()));
+              },
             ),
             ListTile(
               leading: Icon(Icons.logout),
